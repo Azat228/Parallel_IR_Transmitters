@@ -177,14 +177,13 @@ http://192.168.2.99:9090/
 
 This protocol is custom-designed and inspired by the NEC IR standard, with the following differences:
 
-| Feature          | NEC Standard | OWN Standard          |
-|------------------|--------------|-----------------------|
-| Total bits       | 32 bits     | 10 bits              |
-| Address bits     | 8 bits      | 5 bits               |
-| Command bits     | 8 bits      | 5 bits               |
-| Parallel channels| 1            | 2 (concurrent) ✨    |
+| Feature          | NEC Standard | 
+|------------------|--------------|
+| Total bits       | 32 bits     | 
+| Address bits     | 8 bits      | 
+| Command bits     | 8 bits      |
+| Parallel channels| 24            | 
 
-> 🚧 Parallel OWN transmission  is currently still in progress.
 
 ---
 
@@ -195,15 +194,19 @@ This protocol is custom-designed and inspired by the NEC IR standard, with the f
 - **Vivado 2020.2** — [Download from Xilinx Archive](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html)
 - **PYNQ-Z2 Board Files** — [Install from this repository](https://github.com/xupsh/pynq-supported-board-file?tab=readme-ov-file)
 
-### 2. Project Folder Responsibilities
+### Arduino-only side solution (No_FPGA_approach)
 
-| Folder      | Description                                      |
-|-------------|--------------------------------------------------|
-| `PS part/`  | PYNQ-Z2 server-side code (Processing System)    |
-| `PL part/`  | IP cores and hardware design (Programmable Logic)|
-| `arduino part/` | Arduino code for testing and debugging       |
+For a low-cost alternative without FPGA hardware, use the Arduino-based IR transmitter in:
+- `No_FPGA_approach/IR_transmitter/IR_transmitter.ino`
 
----
+Usage:
+1. Upload this sketch to an Arduino Uno.
+2. Connect the IR emitter driver output to D2.
+3. Open Serial Monitor at 9600 baud.
+4. Enter text commands in the serial terminal and send.
+
+Special command mapping:
+- Use `Def` to trigger the preset mapping analogous to the `-xx00+` configuration in your logic.
 
 ## 🐛 Troubleshooting
 
