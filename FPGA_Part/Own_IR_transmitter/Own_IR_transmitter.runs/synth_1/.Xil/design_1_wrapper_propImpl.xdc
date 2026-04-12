@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/constrs_1/new/constrains.xdc rfile:../../../Own_IR_transmitter.srcs/constrs_1/new/constrains.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/azati/OneDrive/Desktop/Parallel_IR_Transmitters-main/Parallel_IR_Transmitters-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/constrs_1/new/constrains.xdc rfile:../../../Own_IR_transmitter.srcs/constrs_1/new/constrains.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN T14 IOSTANDARD LVCMOS33} [get_ports {ir_out_0}] ; # PYNQ-Z2: ARDUINO D0 (D0)
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]

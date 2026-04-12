@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Fri Mar 20 15:18:32 2026'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Mon Apr 13 03:55:46 2026'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="3064766" description="" />
-  <keyValuePair key="date_generated" value="Fri Mar 20 15:18:32 2026" description="" />
+  <keyValuePair key="date_generated" value="Mon Apr 13 03:55:46 2026" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2020.2 (64-bit)" description="" />
   <keyValuePair key="project_id" value="ea0bfc580968425e92463d3bfbca55a0" description="" />
-  <keyValuePair key="project_iteration" value="5" description="" />
+  <keyValuePair key="project_iteration" value="7" description="" />
   <keyValuePair key="random_id" value="e30ca2b06ae75b7aa96c94b5b0d272e7" description="" />
   <keyValuePair key="registration_id" value="e30ca2b06ae75b7aa96c94b5b0d272e7" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
@@ -72,7 +72,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/10" level="2" order="3" description="">
-   <keyValuePair key="carrier_freq" value="74000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -93,7 +93,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/11" level="2" order="4" description="">
-   <keyValuePair key="carrier_freq" value="76000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -114,7 +114,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/12" level="2" order="5" description="">
-   <keyValuePair key="carrier_freq" value="78000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -135,7 +135,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/13" level="2" order="6" description="">
-   <keyValuePair key="carrier_freq" value="80000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -156,7 +156,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/14" level="2" order="7" description="">
-   <keyValuePair key="carrier_freq" value="82000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -177,7 +177,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/15" level="2" order="8" description="">
-   <keyValuePair key="carrier_freq" value="84000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -198,7 +198,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/16" level="2" order="9" description="">
-   <keyValuePair key="carrier_freq" value="40000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -219,7 +219,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/17" level="2" order="10" description="">
-   <keyValuePair key="carrier_freq" value="42000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -240,7 +240,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/18" level="2" order="11" description="">
-   <keyValuePair key="carrier_freq" value="44000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -261,7 +261,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/19" level="2" order="12" description="">
-   <keyValuePair key="carrier_freq" value="46000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -282,7 +282,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/2" level="2" order="13" description="">
-   <keyValuePair key="carrier_freq" value="58000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -303,7 +303,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/20" level="2" order="14" description="">
-   <keyValuePair key="carrier_freq" value="48000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -324,7 +324,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/21" level="2" order="15" description="">
-   <keyValuePair key="carrier_freq" value="50000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -345,7 +345,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/22" level="2" order="16" description="">
-   <keyValuePair key="carrier_freq" value="52000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -366,7 +366,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/23" level="2" order="17" description="">
-   <keyValuePair key="carrier_freq" value="54000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -387,7 +387,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/24" level="2" order="18" description="">
-   <keyValuePair key="carrier_freq" value="56000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -408,7 +408,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/3" level="2" order="19" description="">
-   <keyValuePair key="carrier_freq" value="60000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -429,7 +429,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/4" level="2" order="20" description="">
-   <keyValuePair key="carrier_freq" value="62000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -450,7 +450,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/5" level="2" order="21" description="">
-   <keyValuePair key="carrier_freq" value="64000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -471,7 +471,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/6" level="2" order="22" description="">
-   <keyValuePair key="carrier_freq" value="66000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -492,7 +492,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/7" level="2" order="23" description="">
-   <keyValuePair key="carrier_freq" value="68000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -513,7 +513,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/8" level="2" order="24" description="">
-   <keyValuePair key="carrier_freq" value="70000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -534,7 +534,7 @@
    <keyValuePair key="x_ipversion" value="1.0" description="" />
   </section>
   <section name="IR_transmission/9" level="2" order="25" description="">
-   <keyValuePair key="carrier_freq" value="72000" description="" />
+   <keyValuePair key="carrier_freq" value="38000" description="" />
    <keyValuePair key="clk_freq" value="125000000" description="" />
    <keyValuePair key="core_container" value="NA" description="" />
    <keyValuePair key="data_pulse" value="3" description="" />
@@ -1354,7 +1354,7 @@
    <keyValuePair key="output_load" value="5.000000" description="" />
    <keyValuePair key="output_toggle" value="12.500000" description="" />
    <keyValuePair key="package" value="clg400" description="" />
-   <keyValuePair key="pct_clock_constrained" value="5.000000" description="" />
+   <keyValuePair key="pct_clock_constrained" value="4.000000" description="" />
    <keyValuePair key="pct_inputs_defined" value="0" description="" />
    <keyValuePair key="platform" value="nt64" description="" />
    <keyValuePair key="process" value="typical" description="" />
@@ -1726,10 +1726,10 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:00:50s" description="" />
+   <keyValuePair key="elapsed" value="00:00:46s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="265.688MB" description="" />
-   <keyValuePair key="memory_peak" value="1354.758MB" description="" />
+   <keyValuePair key="memory_gain" value="250.492MB" description="" />
+   <keyValuePair key="memory_peak" value="1359.730MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="10" description="">
@@ -1776,16 +1776,17 @@
   <section name="gui_handlers" level="2" order="1" description="">
    <keyValuePair key="abstractsearchablepanel_show_search" value="5" description="" />
    <keyValuePair key="applyrsbmultiautomationdialog_checkbox_tree" value="4" description="" />
-   <keyValuePair key="basedialog_cancel" value="13" description="" />
+   <keyValuePair key="basedialog_cancel" value="17" description="" />
    <keyValuePair key="basedialog_no" value="1" description="" />
-   <keyValuePair key="basedialog_ok" value="58" description="" />
-   <keyValuePair key="basedialog_yes" value="10" description="" />
-   <keyValuePair key="cmdmsgdialog_ok" value="7" description="" />
+   <keyValuePair key="basedialog_ok" value="92" description="" />
+   <keyValuePair key="basedialog_yes" value="13" description="" />
+   <keyValuePair key="cmdmsgdialog_ok" value="11" description="" />
    <keyValuePair key="commandsinput_type_tcl_command_here" value="3" description="" />
    <keyValuePair key="exportplatformwizard_fixed_post_impl" value="1" description="" />
    <keyValuePair key="expruntreepanel_exp_run_tree_table" value="2" description="" />
-   <keyValuePair key="filesetpanel_file_set_panel_tree" value="110" description="" />
-   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="24" description="" />
+   <keyValuePair key="filesetpanel_file_set_panel_tree" value="137" description="" />
+   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="27" description="" />
+   <keyValuePair key="gettingstartedview_open_project" value="1" description="" />
    <keyValuePair key="graphicalview_zoom_fit" value="5" description="" />
    <keyValuePair key="hexceptiondialog_exit" value="1" description="" />
    <keyValuePair key="launchpanel_launch_directory" value="1" description="" />
@@ -1802,35 +1803,35 @@
    <keyValuePair key="mainmenumgr_text_editor" value="2" description="" />
    <keyValuePair key="mainmenumgr_tools" value="6" description="" />
    <keyValuePair key="mainmenumgr_window" value="4" description="" />
-   <keyValuePair key="msgtreepanel_message_view_tree" value="11" description="" />
+   <keyValuePair key="msgtreepanel_message_view_tree" value="12" description="" />
    <keyValuePair key="pacommandnames_auto_connect_ports" value="1" description="" />
-   <keyValuePair key="pacommandnames_auto_connect_target" value="1" description="" />
+   <keyValuePair key="pacommandnames_auto_connect_target" value="2" description="" />
    <keyValuePair key="pacommandnames_auto_update_hier" value="5" description="" />
    <keyValuePair key="pacommandnames_create_new_diagram" value="1" description="" />
-   <keyValuePair key="pacommandnames_create_top_hdl" value="5" description="" />
+   <keyValuePair key="pacommandnames_create_top_hdl" value="8" description="" />
    <keyValuePair key="pacommandnames_export_bitstream_files" value="1" description="" />
    <keyValuePair key="pacommandnames_export_hardware" value="1" description="" />
    <keyValuePair key="pacommandnames_fileset_window" value="1" description="" />
    <keyValuePair key="pacommandnames_highlight_default_color" value="1" description="" />
-   <keyValuePair key="pacommandnames_open_hardware_manager" value="1" description="" />
+   <keyValuePair key="pacommandnames_open_hardware_manager" value="2" description="" />
    <keyValuePair key="pacommandnames_regenerate_layout" value="1" description="" />
    <keyValuePair key="pacommandnames_simulation_run" value="6" description="" />
    <keyValuePair key="pacommandnames_simulation_run_behavioral" value="4" description="" />
    <keyValuePair key="pacommandnames_simulation_settings" value="1" description="" />
    <keyValuePair key="pacommandnames_validate_rsb_design" value="1" description="" />
    <keyValuePair key="paviews_device" value="1" description="" />
-   <keyValuePair key="paviews_project_summary" value="11" description="" />
-   <keyValuePair key="planaheadtab_refresh_changed_modules" value="4" description="" />
-   <keyValuePair key="programdebugtab_open_target" value="1" description="" />
-   <keyValuePair key="programdebugtab_program_device" value="1" description="" />
-   <keyValuePair key="programfpgadialog_program" value="1" description="" />
+   <keyValuePair key="paviews_project_summary" value="13" description="" />
+   <keyValuePair key="planaheadtab_refresh_changed_modules" value="5" description="" />
+   <keyValuePair key="programdebugtab_open_target" value="3" description="" />
+   <keyValuePair key="programdebugtab_program_device" value="2" description="" />
+   <keyValuePair key="programfpgadialog_program" value="2" description="" />
    <keyValuePair key="progressdialog_background" value="3" description="" />
    <keyValuePair key="projectsettingssimulationpanel_tabbed_pane" value="1" description="" />
    <keyValuePair key="projecttab_close_design" value="1" description="" />
    <keyValuePair key="rdiviews_waveform_viewer" value="5" description="" />
    <keyValuePair key="rsbapplyautomationbar_run_connection_automation" value="4" description="" />
    <keyValuePair key="saveprojectutils_save" value="1" description="" />
-   <keyValuePair key="selectmenu_highlight" value="68" description="" />
+   <keyValuePair key="selectmenu_highlight" value="71" description="" />
    <keyValuePair key="srcmenu_ip_hierarchy" value="3" description="" />
    <keyValuePair key="srcmenu_refresh_hierarchy" value="1" description="" />
    <keyValuePair key="stalerundialog_yes" value="1" description="" />
@@ -1838,8 +1839,8 @@
    <keyValuePair key="systembuildermenu_create_port" value="1" description="" />
    <keyValuePair key="systembuildermenu_ip_documentation" value="1" description="" />
    <keyValuePair key="systembuilderview_expand_collapse" value="2" description="" />
-   <keyValuePair key="systembuilderview_orientation" value="2" description="" />
-   <keyValuePair key="systembuilderview_pinning" value="3" description="" />
+   <keyValuePair key="systembuilderview_orientation" value="4" description="" />
+   <keyValuePair key="systembuilderview_pinning" value="5" description="" />
    <keyValuePair key="tclconsoleview_tcl_console_code_editor" value="16" description="" />
    <keyValuePair key="touchpointsurveydialog_no" value="1" description="" />
    <keyValuePair key="viotreetablepanel_vio_tree_table" value="2" description="" />
@@ -1847,33 +1848,34 @@
   </section>
   <section name="java_command_handlers" level="2" order="2" description="">
    <keyValuePair key="autoconnectport" value="24" description="" />
-   <keyValuePair key="autoconnecttarget" value="1" description="" />
+   <keyValuePair key="autoconnecttarget" value="2" description="" />
    <keyValuePair key="createblockdesign" value="1" description="" />
-   <keyValuePair key="createtophdl" value="5" description="" />
-   <keyValuePair key="customizersbblock" value="40" description="" />
+   <keyValuePair key="createtophdl" value="8" description="" />
+   <keyValuePair key="customizersbblock" value="69" description="" />
    <keyValuePair key="editcopy" value="23" description="" />
    <keyValuePair key="editdelete" value="4" description="" />
    <keyValuePair key="editpaste" value="44" description="" />
    <keyValuePair key="editundo" value="2" description="" />
-   <keyValuePair key="exitapp" value="5" description="" />
+   <keyValuePair key="exitapp" value="8" description="" />
    <keyValuePair key="exportbitfile" value="1" description="" />
    <keyValuePair key="highglightdefaultcolor" value="1" description="" />
-   <keyValuePair key="launchprogramfpga" value="1" description="" />
+   <keyValuePair key="launchprogramfpga" value="2" description="" />
    <keyValuePair key="newexporthardware" value="1" description="" />
-   <keyValuePair key="openhardwaremanager" value="2" description="" />
+   <keyValuePair key="openhardwaremanager" value="3" description="" />
+   <keyValuePair key="openproject" value="1" description="" />
    <keyValuePair key="regeneratersblayout" value="1" description="" />
-   <keyValuePair key="runbitgen" value="11" description="" />
+   <keyValuePair key="runbitgen" value="14" description="" />
    <keyValuePair key="runschematic" value="1" description="" />
    <keyValuePair key="runsynthesis" value="1" description="" />
    <keyValuePair key="saversbdesign" value="2" description="" />
-   <keyValuePair key="showview" value="5" description="" />
+   <keyValuePair key="showview" value="6" description="" />
    <keyValuePair key="simulationrun" value="4" description="" />
    <keyValuePair key="toolssettings" value="1" description="" />
    <keyValuePair key="validatersbdesign" value="1" description="" />
    <keyValuePair key="viewtaskimplementation" value="2" description="" />
   </section>
   <section name="other_data" level="2" order="3" description="">
-   <keyValuePair key="guimode" value="9" description="" />
+   <keyValuePair key="guimode" value="12" description="" />
   </section>
   <section name="project_data" level="2" order="4" description="">
    <keyValuePair key="constraintsetcount" value="1" description="" />

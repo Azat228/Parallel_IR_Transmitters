@@ -180,4 +180,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ti
 # IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
 
-# XDC: c:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: c:/Users/azati/OneDrive/Desktop/Parallel_IR_Transmitters-main/Parallel_IR_Transmitters-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/design_1_ooc.xdc

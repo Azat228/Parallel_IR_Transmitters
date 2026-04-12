@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Mar 20 14:40:42 2026
-# Process ID: 12344
-# Current directory: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_19_0_synth_1
+# Start of session at: Mon Apr 13 03:50:32 2026
+# Process ID: 12740
+# Current directory: C:/Users/azati/OneDrive/Desktop/Parallel_IR_Transmitters-main/Parallel_IR_Transmitters-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_19_0_synth_1
 # Command line: vivado.exe -log design_1_IR_transmission_19_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_IR_transmission_19_0.tcl
-# Log file: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_19_0_synth_1/design_1_IR_transmission_19_0.vds
-# Journal file: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_19_0_synth_1\vivado.jou
+# Log file: C:/Users/azati/OneDrive/Desktop/Parallel_IR_Transmitters-main/Parallel_IR_Transmitters-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_19_0_synth_1/design_1_IR_transmission_19_0.vds
+# Journal file: C:/Users/azati/OneDrive/Desktop/Parallel_IR_Transmitters-main/Parallel_IR_Transmitters-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_19_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_IR_transmission_19_0.tcl -notrace

@@ -215,7 +215,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {40000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_2
 
   # Create instance: IR_transmission_3, and set properties
@@ -229,7 +229,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {42000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_3
 
   # Create instance: IR_transmission_4, and set properties
@@ -243,7 +243,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {44000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_4
 
   # Create instance: IR_transmission_5, and set properties
@@ -257,7 +257,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {46000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_5
 
   # Create instance: IR_transmission_6, and set properties
@@ -271,7 +271,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {48000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_6
 
   # Create instance: IR_transmission_7, and set properties
@@ -285,7 +285,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {50000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_7
 
   # Create instance: IR_transmission_8, and set properties
@@ -299,7 +299,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {52000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_8
 
   # Create instance: IR_transmission_9, and set properties
@@ -313,7 +313,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {54000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_9
 
   # Create instance: IR_transmission_10, and set properties
@@ -327,7 +327,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {56000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_10
 
   # Create instance: IR_transmission_11, and set properties
@@ -341,7 +341,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {58000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_11
 
   # Create instance: IR_transmission_12, and set properties
@@ -355,7 +355,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {60000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_12
 
   # Create instance: IR_transmission_13, and set properties
@@ -369,7 +369,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {62000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_13
 
   # Create instance: IR_transmission_14, and set properties
@@ -383,7 +383,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {64000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_14
 
   # Create instance: IR_transmission_15, and set properties
@@ -397,7 +397,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {66000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_15
 
   # Create instance: IR_transmission_16, and set properties
@@ -411,7 +411,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {68000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_16
 
   # Create instance: IR_transmission_17, and set properties
@@ -425,7 +425,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {70000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_17
 
   # Create instance: IR_transmission_18, and set properties
@@ -439,7 +439,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {72000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_18
 
   # Create instance: IR_transmission_19, and set properties
@@ -453,7 +453,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {74000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_19
 
   # Create instance: IR_transmission_20, and set properties
@@ -467,7 +467,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {76000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_20
 
   # Create instance: IR_transmission_21, and set properties
@@ -481,7 +481,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {78000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_21
 
   # Create instance: IR_transmission_22, and set properties
@@ -495,7 +495,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {80000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_22
 
   # Create instance: IR_transmission_23, and set properties
@@ -509,7 +509,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {82000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_23
 
   # Create instance: IR_transmission_24, and set properties
@@ -523,7 +523,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.CARRIER_FREQ {84000} \
+   CONFIG.CARRIER_FREQ {38000} \
  ] $IR_transmission_24
 
   # Create instance: axi_gpio_0, and set properties

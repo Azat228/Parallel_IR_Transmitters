@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "IR_transmission,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_IR_transmission_3_0,IR_transmission,{}" *)
-(* CORE_GENERATION_INFO = "design_1_IR_transmission_3_0,IR_transmission,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=IR_transmission,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CLK_FREQ=125000000,CARRIER_FREQ=44000,IDLE=0,START_PULSE=1,START_SPACE=2,DATA_PULSE=3,DATA_SPACE=4,STOP=5,RELAX=6}" *)
+(* CORE_GENERATION_INFO = "design_1_IR_transmission_3_0,IR_transmission,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=IR_transmission,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CLK_FREQ=125000000,CARRIER_FREQ=38000,IDLE=0,START_PULSE=1,START_SPACE=2,DATA_PULSE=3,DATA_SPACE=4,STOP=5,RELAX=6}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_IR_transmission_3_0 (
@@ -73,7 +73,7 @@ output wire ir_out;
 
   IR_transmission #(
     .CLK_FREQ(125000000),
-    .CARRIER_FREQ(44000),
+    .CARRIER_FREQ(38000),
     .IDLE(0),
     .START_PULSE(1),
     .START_SPACE(2),

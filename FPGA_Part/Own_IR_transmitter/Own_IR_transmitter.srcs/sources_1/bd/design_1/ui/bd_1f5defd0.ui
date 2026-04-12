@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.05773",
-   "Default View_TopLeft":"1435,251",
+   "Default View_TopLeft":"1323,-392",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
@@ -37,18 +37,11 @@ preplace inst axi_gpio_2 -pg 1 -lvl 3 -x 1150 -y 1460 -defaultsOSRD
 preplace inst axi_gpio_1 -pg 1 -lvl 3 -x 1150 -y 1300 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -x 220 -y 420 -defaultsOSRD
 preplace inst rst_ps7_0_125M -pg 1 -lvl 1 -x 220 -y 640 -defaultsOSRD
-preplace inst IR_transmission_3 -pg 1 -lvl 4 -x 1790 -y 510 -defaultsOSRD
 preplace inst axi_gpio_3 -pg 1 -lvl 3 -x 1150 -y 1140 -defaultsOSRD
-preplace inst IR_transmission_1 -pg 1 -lvl 4 -x 1790 -y 830 -defaultsOSRD
-preplace inst IR_transmission_2 -pg 1 -lvl 4 -x 1790 -y 670 -defaultsOSRD
 preplace inst axi_gpio_4 -pg 1 -lvl 3 -x 1150 -y 950 -defaultsOSRD
 preplace inst axi_gpio_5 -pg 1 -lvl 3 -x 1150 -y 790 -defaultsOSRD
 preplace inst axi_gpio_6 -pg 1 -lvl 3 -x 1150 -y 630 -defaultsOSRD
 preplace inst axi_gpio_7 -pg 1 -lvl 3 -x 1150 -y 470 -defaultsOSRD
-preplace inst IR_transmission_4 -pg 1 -lvl 4 -x 1790 -y 320 -defaultsOSRD
-preplace inst IR_transmission_5 -pg 1 -lvl 4 -x 1790 -y 160 -defaultsOSRD
-preplace inst IR_transmission_6 -pg 1 -lvl 4 -x 1790 -y 0 -defaultsOSRD
-preplace inst IR_transmission_7 -pg 1 -lvl 4 -x 1790 -y -160 -defaultsOSRD
 preplace inst axi_gpio_8 -pg 1 -lvl 3 -x 1150 -y 310 -defaultsOSRD
 preplace inst axi_gpio_9 -pg 1 -lvl 3 -x 1150 -y 150 -defaultsOSRD
 preplace inst axi_gpio_10 -pg 1 -lvl 3 -x 1150 -y -10 -defaultsOSRD
@@ -56,13 +49,6 @@ preplace inst axi_gpio_11 -pg 1 -lvl 3 -x 1150 -y -170 -defaultsOSRD
 preplace inst axi_gpio_12 -pg 1 -lvl 3 -x 1150 -y -330 -defaultsOSRD
 preplace inst axi_gpio_13 -pg 1 -lvl 3 -x 1150 -y -490 -defaultsOSRD
 preplace inst axi_gpio_14 -pg 1 -lvl 3 -x 1150 -y -650 -defaultsOSRD
-preplace inst IR_transmission_8 -pg 1 -lvl 4 -x 1790 -y -320 -defaultsOSRD
-preplace inst IR_transmission_9 -pg 1 -lvl 4 -x 1790 -y -480 -defaultsOSRD
-preplace inst IR_transmission_10 -pg 1 -lvl 4 -x 1790 -y -640 -defaultsOSRD
-preplace inst IR_transmission_11 -pg 1 -lvl 4 -x 1790 -y -800 -defaultsOSRD
-preplace inst IR_transmission_12 -pg 1 -lvl 4 -x 1790 -y -960 -defaultsOSRD
-preplace inst IR_transmission_13 -pg 1 -lvl 4 -x 1790 -y -1120 -defaultsOSRD
-preplace inst IR_transmission_14 -pg 1 -lvl 4 -x 1790 -y -1280 -defaultsOSRD
 preplace inst axi_gpio_15 -pg 1 -lvl 3 -x 1150 -y -990 -defaultsOSRD
 preplace inst axi_gpio_16 -pg 1 -lvl 3 -x 1150 -y -1150 -defaultsOSRD
 preplace inst axi_gpio_17 -pg 1 -lvl 3 -x 1150 -y -1560 -defaultsOSRD
@@ -73,6 +59,11 @@ preplace inst axi_gpio_21 -pg 1 -lvl 3 -x 1150 -y -2410 -defaultsOSRD
 preplace inst axi_gpio_22 -pg 1 -lvl 3 -x 1150 -y -2720 -defaultsOSRD
 preplace inst axi_gpio_23 -pg 1 -lvl 3 -x 1150 -y -2970 -defaultsOSRD
 preplace inst axi_gpio_24 -pg 1 -lvl 3 -x 1150 -y -3190 -defaultsOSRD
+preplace inst IR_transmission_1 -pg 1 -lvl 4 -x 1790 -y 830 -defaultsOSRD
+preplace inst IR_transmission_11 -pg 1 -lvl 4 -x 1790 -y -800 -defaultsOSRD
+preplace inst IR_transmission_12 -pg 1 -lvl 4 -x 1790 -y -960 -defaultsOSRD
+preplace inst IR_transmission_13 -pg 1 -lvl 4 -x 1790 -y -1120 -defaultsOSRD
+preplace inst IR_transmission_14 -pg 1 -lvl 4 -x 1790 -y -1280 -defaultsOSRD
 preplace inst IR_transmission_15 -pg 1 -lvl 4 -x 1790 -y -1440 -defaultsOSRD
 preplace inst IR_transmission_16 -pg 1 -lvl 4 -x 1790 -y -1600 -defaultsOSRD
 preplace inst IR_transmission_17 -pg 1 -lvl 4 -x 1790 -y -1760 -defaultsOSRD
@@ -83,6 +74,15 @@ preplace inst IR_transmission_21 -pg 1 -lvl 4 -x 1790 -y -2480 -defaultsOSRD
 preplace inst IR_transmission_22 -pg 1 -lvl 4 -x 1790 -y -2770 -defaultsOSRD
 preplace inst IR_transmission_23 -pg 1 -lvl 4 -x 1790 -y -3010 -defaultsOSRD
 preplace inst IR_transmission_24 -pg 1 -lvl 4 -x 1790 -y -3190 -defaultsOSRD
+preplace inst IR_transmission_2 -pg 1 -lvl 4 -x 1790 -y 670 -defaultsOSRD
+preplace inst IR_transmission_3 -pg 1 -lvl 4 -x 1790 -y 510 -defaultsOSRD
+preplace inst IR_transmission_4 -pg 1 -lvl 4 -x 1790 -y 320 -defaultsOSRD
+preplace inst IR_transmission_5 -pg 1 -lvl 4 -x 1790 -y 160 -defaultsOSRD
+preplace inst IR_transmission_6 -pg 1 -lvl 4 -x 1790 -y 0 -defaultsOSRD
+preplace inst IR_transmission_7 -pg 1 -lvl 4 -x 1790 -y -160 -defaultsOSRD
+preplace inst IR_transmission_8 -pg 1 -lvl 4 -x 1790 -y -320 -defaultsOSRD
+preplace inst IR_transmission_9 -pg 1 -lvl 4 -x 1790 -y -480 -defaultsOSRD
+preplace inst IR_transmission_10 -pg 1 -lvl 4 -x 1790 -y -640 -defaultsOSRD
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 540 430
 preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 1 2 450 -40 1000
 preplace netloc IR_transmission_1_ir_out 1 4 1 1980J 90n
@@ -159,34 +159,34 @@ preplace netloc IR_transmission_21_ir_out 1 4 1 N -2480
 preplace netloc IR_transmission_22_ir_out 1 4 1 N -2770
 preplace netloc IR_transmission_23_ir_out 1 4 1 N -3010
 preplace netloc IR_transmission_24_ir_out 1 4 1 N -3190
-preplace netloc axi_interconnect_0_M06_AXI 1 2 1 800 450n
-preplace netloc axi_interconnect_0_M01_AXI 1 2 1 990 350n
-preplace netloc axi_interconnect_0_M02_AXI 1 2 1 740 370n
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 420 30n
-preplace netloc processing_system7_0_DDR 1 1 4 410J -750 NJ -750 1410J 410 1970J
 preplace netloc axi_interconnect_0_M12_AXI 1 2 1 940 -350n
-preplace netloc processing_system7_0_FIXED_IO 1 1 4 440J -740 NJ -740 1400J 420 2000J
-preplace netloc axi_interconnect_0_M00_AXI 1 2 1 850 330n
-preplace netloc axi_interconnect_0_M10_AXI 1 2 1 960 -30n
+preplace netloc axi_interconnect_0_M21_AXI 1 2 1 870 -2430n
 preplace netloc axi_interconnect_0_M20_AXI 1 2 1 880 -2270n
 preplace netloc axi_interconnect_0_M22_AXI 1 2 1 770 -2740n
-preplace netloc axi_interconnect_0_M24_AXI 1 2 1 760 -3210n
 preplace netloc axi_interconnect_0_M07_AXI 1 2 1 820 450n
+preplace netloc axi_interconnect_0_M00_AXI 1 2 1 850 330n
 preplace netloc axi_interconnect_0_M13_AXI 1 2 1 930 -510n
-preplace netloc axi_interconnect_0_M05_AXI 1 2 1 810 430n
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 440J -740 NJ -740 1400J 420 2000J
 preplace netloc axi_interconnect_0_M16_AXI 1 2 1 920 -1170n
 preplace netloc axi_interconnect_0_M04_AXI 1 2 1 830 410n
-preplace netloc axi_interconnect_0_M19_AXI 1 2 1 890 -2050n
 preplace netloc axi_interconnect_0_M11_AXI 1 2 1 950 -190n
-preplace netloc axi_interconnect_0_M17_AXI 1 2 1 910 -1580n
-preplace netloc axi_interconnect_0_M08_AXI 1 2 1 980 290n
-preplace netloc axi_interconnect_0_M15_AXI 1 2 1 780 -1010n
-preplace netloc axi_interconnect_0_M23_AXI 1 2 1 750 -2990n
-preplace netloc axi_interconnect_0_M21_AXI 1 2 1 870 -2430n
 preplace netloc axi_interconnect_0_M03_AXI 1 2 1 840 390n
 preplace netloc axi_interconnect_0_M09_AXI 1 2 1 970 130n
-preplace netloc axi_interconnect_0_M14_AXI 1 2 1 790 -670n
+preplace netloc axi_interconnect_0_M17_AXI 1 2 1 910 -1580n
+preplace netloc axi_interconnect_0_M15_AXI 1 2 1 780 -1010n
 preplace netloc axi_interconnect_0_M18_AXI 1 2 1 900 -1810n
+preplace netloc axi_interconnect_0_M10_AXI 1 2 1 960 -30n
+preplace netloc axi_interconnect_0_M05_AXI 1 2 1 810 430n
+preplace netloc axi_interconnect_0_M19_AXI 1 2 1 890 -2050n
+preplace netloc axi_interconnect_0_M24_AXI 1 2 1 760 -3210n
+preplace netloc axi_interconnect_0_M14_AXI 1 2 1 790 -670n
+preplace netloc axi_interconnect_0_M08_AXI 1 2 1 980 290n
+preplace netloc axi_interconnect_0_M23_AXI 1 2 1 750 -2990n
+preplace netloc axi_interconnect_0_M06_AXI 1 2 1 800 450n
+preplace netloc axi_interconnect_0_M01_AXI 1 2 1 990 350n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 420 30n
+preplace netloc processing_system7_0_DDR 1 1 4 410J -750 NJ -750 1410J 410 1970J
+preplace netloc axi_interconnect_0_M02_AXI 1 2 1 740 370n
 levelinfo -pg 1 0 220 600 1150 1790 2020
 pagesize -pg 1 -db -bbox -sgen 0 -3480 2150 1690
 "

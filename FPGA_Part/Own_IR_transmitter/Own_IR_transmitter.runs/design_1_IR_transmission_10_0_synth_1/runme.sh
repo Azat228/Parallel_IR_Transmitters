@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_10_0_synth_1'
+HD_PWD='C:/Users/azati/OneDrive/Desktop/Parallel_IR_Transmitters-main/Parallel_IR_Transmitters-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_10_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

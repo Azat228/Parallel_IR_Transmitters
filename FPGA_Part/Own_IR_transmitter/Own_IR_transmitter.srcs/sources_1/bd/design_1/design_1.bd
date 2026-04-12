@@ -7,7 +7,8 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2"
+      "tool_version": "2020.2",
+      "validated": "true"
     },
     "design_tree": {
       "axi_interconnect_0": {
@@ -54,18 +55,11 @@
       "axi_gpio_1": "",
       "processing_system7_0": "",
       "rst_ps7_0_125M": "",
-      "IR_transmission_3": "",
       "axi_gpio_3": "",
-      "IR_transmission_1": "",
-      "IR_transmission_2": "",
       "axi_gpio_4": "",
       "axi_gpio_5": "",
       "axi_gpio_6": "",
       "axi_gpio_7": "",
-      "IR_transmission_4": "",
-      "IR_transmission_5": "",
-      "IR_transmission_6": "",
-      "IR_transmission_7": "",
       "axi_gpio_8": "",
       "axi_gpio_9": "",
       "axi_gpio_10": "",
@@ -73,13 +67,6 @@
       "axi_gpio_12": "",
       "axi_gpio_13": "",
       "axi_gpio_14": "",
-      "IR_transmission_8": "",
-      "IR_transmission_9": "",
-      "IR_transmission_10": "",
-      "IR_transmission_11": "",
-      "IR_transmission_12": "",
-      "IR_transmission_13": "",
-      "IR_transmission_14": "",
       "axi_gpio_15": "",
       "axi_gpio_16": "",
       "axi_gpio_17": "",
@@ -90,6 +77,11 @@
       "axi_gpio_22": "",
       "axi_gpio_23": "",
       "axi_gpio_24": "",
+      "IR_transmission_1": "",
+      "IR_transmission_11": "",
+      "IR_transmission_12": "",
+      "IR_transmission_13": "",
+      "IR_transmission_14": "",
       "IR_transmission_15": "",
       "IR_transmission_16": "",
       "IR_transmission_17": "",
@@ -99,16 +91,81 @@
       "IR_transmission_21": "",
       "IR_transmission_22": "",
       "IR_transmission_23": "",
-      "IR_transmission_24": ""
+      "IR_transmission_24": "",
+      "IR_transmission_2": "",
+      "IR_transmission_3": "",
+      "IR_transmission_4": "",
+      "IR_transmission_5": "",
+      "IR_transmission_6": "",
+      "IR_transmission_7": "",
+      "IR_transmission_8": "",
+      "IR_transmission_9": "",
+      "IR_transmission_10": ""
     },
     "interface_ports": {
       "DDR": {
         "mode": "Master",
-        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0"
+        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0",
+        "parameters": {
+          "AXI_ARBITRATION_SCHEME": {
+            "value": "TDM",
+            "value_src": "default"
+          },
+          "BURST_LENGTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "CAS_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CAS_WRITE_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CS_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_MASK_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_WIDTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "MEMORY_TYPE": {
+            "value": "COMPONENTS",
+            "value_src": "default"
+          },
+          "MEM_ADDR_MAP": {
+            "value": "ROW_COLUMN_BANK",
+            "value_src": "default"
+          },
+          "SLOT": {
+            "value": "Single",
+            "value_src": "default"
+          },
+          "TIMEPERIOD_PS": {
+            "value": "1250",
+            "value_src": "default"
+          }
+        }
       },
       "FIXED_IO": {
         "mode": "Master",
-        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0"
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          }
+        }
       }
     },
     "ports": {
@@ -2541,36 +2598,6 @@
           }
         },
         "interface_nets": {
-          "xbar_to_i02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "i02_couplers/S_AXI"
-            ]
-          },
-          "tier2_xbar_0_to_m00_couplers": {
-            "interface_ports": [
-              "tier2_xbar_0/M00_AXI",
-              "m00_couplers/S_AXI"
-            ]
-          },
-          "m03_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M03_AXI",
-              "m03_couplers/M_AXI"
-            ]
-          },
-          "m01_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
-            ]
-          },
-          "m00_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
           "s00_couplers_to_xbar": {
             "interface_ports": [
               "s00_couplers/M_AXI",
@@ -2589,10 +2616,70 @@
               "tier2_xbar_3/S00_AXI"
             ]
           },
-          "i02_couplers_to_tier2_xbar_2": {
+          "tier2_xbar_3_to_m24_couplers": {
             "interface_ports": [
-              "i02_couplers/M_AXI",
-              "tier2_xbar_2/S00_AXI"
+              "tier2_xbar_3/M01_AXI",
+              "m24_couplers/S_AXI"
+            ]
+          },
+          "m01_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_0_to_m01_couplers": {
+            "interface_ports": [
+              "tier2_xbar_0/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
+          "m02_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M02_AXI",
+              "m02_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_0_to_m02_couplers": {
+            "interface_ports": [
+              "tier2_xbar_0/M02_AXI",
+              "m02_couplers/S_AXI"
+            ]
+          },
+          "m03_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M03_AXI",
+              "m03_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_0_to_m03_couplers": {
+            "interface_ports": [
+              "tier2_xbar_0/M03_AXI",
+              "m03_couplers/S_AXI"
+            ]
+          },
+          "m00_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
+          "m08_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M08_AXI",
+              "m08_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_0_to_m00_couplers": {
+            "interface_ports": [
+              "tier2_xbar_0/M00_AXI",
+              "m00_couplers/S_AXI"
+            ]
+          },
+          "tier2_xbar_0_to_m04_couplers": {
+            "interface_ports": [
+              "tier2_xbar_0/M04_AXI",
+              "m04_couplers/S_AXI"
             ]
           },
           "m05_couplers_to_axi_interconnect_0": {
@@ -2601,10 +2688,22 @@
               "m05_couplers/M_AXI"
             ]
           },
-          "m08_couplers_to_axi_interconnect_0": {
+          "tier2_xbar_0_to_m05_couplers": {
             "interface_ports": [
-              "M08_AXI",
-              "m08_couplers/M_AXI"
+              "tier2_xbar_0/M05_AXI",
+              "m05_couplers/S_AXI"
+            ]
+          },
+          "m06_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M06_AXI",
+              "m06_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_0_to_m06_couplers": {
+            "interface_ports": [
+              "tier2_xbar_0/M06_AXI",
+              "m06_couplers/S_AXI"
             ]
           },
           "m07_couplers_to_axi_interconnect_0": {
@@ -2619,46 +2718,130 @@
               "m07_couplers/S_AXI"
             ]
           },
-          "m09_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M09_AXI",
-              "m09_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_i03_couplers": {
-            "interface_ports": [
-              "xbar/M03_AXI",
-              "i03_couplers/S_AXI"
-            ]
-          },
           "tier2_xbar_1_to_m08_couplers": {
             "interface_ports": [
               "tier2_xbar_1/M00_AXI",
               "m08_couplers/S_AXI"
             ]
           },
-          "tier2_xbar_0_to_m02_couplers": {
+          "m09_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "tier2_xbar_0/M02_AXI",
-              "m02_couplers/S_AXI"
+              "M09_AXI",
+              "m09_couplers/M_AXI"
             ]
           },
-          "m02_couplers_to_axi_interconnect_0": {
+          "m10_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
+              "M10_AXI",
+              "m10_couplers/M_AXI"
             ]
           },
-          "tier2_xbar_0_to_m03_couplers": {
+          "tier2_xbar_1_to_m10_couplers": {
             "interface_ports": [
-              "tier2_xbar_0/M03_AXI",
-              "m03_couplers/S_AXI"
+              "tier2_xbar_1/M02_AXI",
+              "m10_couplers/S_AXI"
             ]
           },
-          "tier2_xbar_0_to_m04_couplers": {
+          "tier2_xbar_1_to_m09_couplers": {
             "interface_ports": [
-              "tier2_xbar_0/M04_AXI",
-              "m04_couplers/S_AXI"
+              "tier2_xbar_1/M01_AXI",
+              "m09_couplers/S_AXI"
+            ]
+          },
+          "tier2_xbar_1_to_m11_couplers": {
+            "interface_ports": [
+              "tier2_xbar_1/M03_AXI",
+              "m11_couplers/S_AXI"
+            ]
+          },
+          "m12_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M12_AXI",
+              "m12_couplers/M_AXI"
+            ]
+          },
+          "m11_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M11_AXI",
+              "m11_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_1_to_m12_couplers": {
+            "interface_ports": [
+              "tier2_xbar_1/M04_AXI",
+              "m12_couplers/S_AXI"
+            ]
+          },
+          "m13_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M13_AXI",
+              "m13_couplers/M_AXI"
+            ]
+          },
+          "m14_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M14_AXI",
+              "m14_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_1_to_m13_couplers": {
+            "interface_ports": [
+              "tier2_xbar_1/M05_AXI",
+              "m13_couplers/S_AXI"
+            ]
+          },
+          "tier2_xbar_1_to_m14_couplers": {
+            "interface_ports": [
+              "tier2_xbar_1/M06_AXI",
+              "m14_couplers/S_AXI"
+            ]
+          },
+          "tier2_xbar_2_to_m16_couplers": {
+            "interface_ports": [
+              "tier2_xbar_2/M00_AXI",
+              "m16_couplers/S_AXI"
+            ]
+          },
+          "tier2_xbar_1_to_m15_couplers": {
+            "interface_ports": [
+              "tier2_xbar_1/M07_AXI",
+              "m15_couplers/S_AXI"
+            ]
+          },
+          "m15_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M15_AXI",
+              "m15_couplers/M_AXI"
+            ]
+          },
+          "m16_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M16_AXI",
+              "m16_couplers/M_AXI"
+            ]
+          },
+          "m04_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M04_AXI",
+              "m04_couplers/M_AXI"
+            ]
+          },
+          "m17_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M17_AXI",
+              "m17_couplers/M_AXI"
+            ]
+          },
+          "m18_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M18_AXI",
+              "m18_couplers/M_AXI"
+            ]
+          },
+          "tier2_xbar_2_to_m17_couplers": {
+            "interface_ports": [
+              "tier2_xbar_2/M01_AXI",
+              "m17_couplers/S_AXI"
             ]
           },
           "tier2_xbar_2_to_m18_couplers": {
@@ -2679,40 +2862,10 @@
               "m19_couplers/S_AXI"
             ]
           },
-          "m04_couplers_to_axi_interconnect_0": {
+          "m23_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "M04_AXI",
-              "m04_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_1_to_m13_couplers": {
-            "interface_ports": [
-              "tier2_xbar_1/M05_AXI",
-              "m13_couplers/S_AXI"
-            ]
-          },
-          "tier2_xbar_1_to_m15_couplers": {
-            "interface_ports": [
-              "tier2_xbar_1/M07_AXI",
-              "m15_couplers/S_AXI"
-            ]
-          },
-          "m14_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M14_AXI",
-              "m14_couplers/M_AXI"
-            ]
-          },
-          "m15_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M15_AXI",
-              "m15_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_1_to_m14_couplers": {
-            "interface_ports": [
-              "tier2_xbar_1/M06_AXI",
-              "m14_couplers/S_AXI"
+              "M23_AXI",
+              "m23_couplers/M_AXI"
             ]
           },
           "tier2_xbar_2_to_m22_couplers": {
@@ -2721,22 +2874,10 @@
               "m22_couplers/S_AXI"
             ]
           },
-          "m20_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M20_AXI",
-              "m20_couplers/M_AXI"
-            ]
-          },
           "tier2_xbar_3_to_m23_couplers": {
             "interface_ports": [
               "tier2_xbar_3/M00_AXI",
               "m23_couplers/S_AXI"
-            ]
-          },
-          "m23_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M23_AXI",
-              "m23_couplers/M_AXI"
             ]
           },
           "m24_couplers_to_axi_interconnect_0": {
@@ -2745,148 +2886,10 @@
               "m24_couplers/M_AXI"
             ]
           },
-          "tier2_xbar_2_to_m17_couplers": {
-            "interface_ports": [
-              "tier2_xbar_2/M01_AXI",
-              "m17_couplers/S_AXI"
-            ]
-          },
-          "m18_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M18_AXI",
-              "m18_couplers/M_AXI"
-            ]
-          },
-          "m12_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M12_AXI",
-              "m12_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_1_to_m12_couplers": {
-            "interface_ports": [
-              "tier2_xbar_1/M04_AXI",
-              "m12_couplers/S_AXI"
-            ]
-          },
-          "tier2_xbar_1_to_m09_couplers": {
-            "interface_ports": [
-              "tier2_xbar_1/M01_AXI",
-              "m09_couplers/S_AXI"
-            ]
-          },
-          "tier2_xbar_1_to_m10_couplers": {
-            "interface_ports": [
-              "tier2_xbar_1/M02_AXI",
-              "m10_couplers/S_AXI"
-            ]
-          },
-          "m10_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M10_AXI",
-              "m10_couplers/M_AXI"
-            ]
-          },
-          "m11_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M11_AXI",
-              "m11_couplers/M_AXI"
-            ]
-          },
-          "m13_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M13_AXI",
-              "m13_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_1_to_m11_couplers": {
-            "interface_ports": [
-              "tier2_xbar_1/M03_AXI",
-              "m11_couplers/S_AXI"
-            ]
-          },
-          "m17_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M17_AXI",
-              "m17_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_2_to_m16_couplers": {
-            "interface_ports": [
-              "tier2_xbar_2/M00_AXI",
-              "m16_couplers/S_AXI"
-            ]
-          },
-          "m16_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M16_AXI",
-              "m16_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_i00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "i00_couplers/S_AXI"
-            ]
-          },
-          "i01_couplers_to_tier2_xbar_1": {
-            "interface_ports": [
-              "i01_couplers/M_AXI",
-              "tier2_xbar_1/S00_AXI"
-            ]
-          },
-          "m06_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M06_AXI",
-              "m06_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_0_to_m05_couplers": {
-            "interface_ports": [
-              "tier2_xbar_0/M05_AXI",
-              "m05_couplers/S_AXI"
-            ]
-          },
-          "i00_couplers_to_tier2_xbar_0": {
-            "interface_ports": [
-              "i00_couplers/M_AXI",
-              "tier2_xbar_0/S00_AXI"
-            ]
-          },
-          "xbar_to_i01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "i01_couplers/S_AXI"
-            ]
-          },
-          "tier2_xbar_0_to_m06_couplers": {
-            "interface_ports": [
-              "tier2_xbar_0/M06_AXI",
-              "m06_couplers/S_AXI"
-            ]
-          },
-          "tier2_xbar_3_to_m24_couplers": {
-            "interface_ports": [
-              "tier2_xbar_3/M01_AXI",
-              "m24_couplers/S_AXI"
-            ]
-          },
-          "tier2_xbar_0_to_m01_couplers": {
-            "interface_ports": [
-              "tier2_xbar_0/M01_AXI",
-              "m01_couplers/S_AXI"
-            ]
-          },
           "m22_couplers_to_axi_interconnect_0": {
             "interface_ports": [
               "M22_AXI",
               "m22_couplers/M_AXI"
-            ]
-          },
-          "tier2_xbar_2_to_m20_couplers": {
-            "interface_ports": [
-              "tier2_xbar_2/M04_AXI",
-              "m20_couplers/S_AXI"
             ]
           },
           "m21_couplers_to_axi_interconnect_0": {
@@ -2895,10 +2898,64 @@
               "m21_couplers/M_AXI"
             ]
           },
+          "tier2_xbar_2_to_m20_couplers": {
+            "interface_ports": [
+              "tier2_xbar_2/M04_AXI",
+              "m20_couplers/S_AXI"
+            ]
+          },
+          "m20_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M20_AXI",
+              "m20_couplers/M_AXI"
+            ]
+          },
           "tier2_xbar_2_to_m21_couplers": {
             "interface_ports": [
               "tier2_xbar_2/M05_AXI",
               "m21_couplers/S_AXI"
+            ]
+          },
+          "xbar_to_i00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "i00_couplers/S_AXI"
+            ]
+          },
+          "xbar_to_i01_couplers": {
+            "interface_ports": [
+              "xbar/M01_AXI",
+              "i01_couplers/S_AXI"
+            ]
+          },
+          "i00_couplers_to_tier2_xbar_0": {
+            "interface_ports": [
+              "i00_couplers/M_AXI",
+              "tier2_xbar_0/S00_AXI"
+            ]
+          },
+          "i01_couplers_to_tier2_xbar_1": {
+            "interface_ports": [
+              "i01_couplers/M_AXI",
+              "tier2_xbar_1/S00_AXI"
+            ]
+          },
+          "xbar_to_i02_couplers": {
+            "interface_ports": [
+              "xbar/M02_AXI",
+              "i02_couplers/S_AXI"
+            ]
+          },
+          "xbar_to_i03_couplers": {
+            "interface_ports": [
+              "xbar/M03_AXI",
+              "i03_couplers/S_AXI"
+            ]
+          },
+          "i02_couplers_to_tier2_xbar_2": {
+            "interface_ports": [
+              "i02_couplers/M_AXI",
+              "tier2_xbar_2/S00_AXI"
             ]
           }
         },
@@ -5137,54 +5194,6 @@
         "xci_path": "ip\\design_1_rst_ps7_0_125M_0\\design_1_rst_ps7_0_125M_0.xci",
         "inst_hier_path": "rst_ps7_0_125M"
       },
-      "IR_transmission_3": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_1_1",
-        "xci_path": "ip\\design_1_IR_transmission_1_1\\design_1_IR_transmission_1_1.xci",
-        "inst_hier_path": "IR_transmission_3",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "42000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
-          }
-        }
-      },
       "axi_gpio_3": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "design_1_axi_gpio_2_0",
@@ -5205,97 +5214,6 @@
           },
           "C_IS_DUAL": {
             "value": "1"
-          }
-        }
-      },
-      "IR_transmission_1": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_0_1",
-        "xci_path": "ip\\design_1_IR_transmission_0_1\\design_1_IR_transmission_0_1.xci",
-        "inst_hier_path": "IR_transmission_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "IR_transmission_2": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_1_0",
-        "xci_path": "ip\\design_1_IR_transmission_1_0\\design_1_IR_transmission_1_0.xci",
-        "inst_hier_path": "IR_transmission_2",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "40000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
           }
         }
       },
@@ -5388,198 +5306,6 @@
           },
           "C_IS_DUAL": {
             "value": "1"
-          }
-        }
-      },
-      "IR_transmission_4": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_3_0",
-        "xci_path": "ip\\design_1_IR_transmission_3_0\\design_1_IR_transmission_3_0.xci",
-        "inst_hier_path": "IR_transmission_4",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "44000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "IR_transmission_5": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_3_1",
-        "xci_path": "ip\\design_1_IR_transmission_3_1\\design_1_IR_transmission_3_1.xci",
-        "inst_hier_path": "IR_transmission_5",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "46000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "IR_transmission_6": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_3_2",
-        "xci_path": "ip\\design_1_IR_transmission_3_2\\design_1_IR_transmission_3_2.xci",
-        "inst_hier_path": "IR_transmission_6",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "48000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "IR_transmission_7": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_3_3",
-        "xci_path": "ip\\design_1_IR_transmission_3_3\\design_1_IR_transmission_3_3.xci",
-        "inst_hier_path": "IR_transmission_7",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "50000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
           }
         }
       },
@@ -5741,342 +5467,6 @@
           },
           "C_IS_DUAL": {
             "value": "1"
-          }
-        }
-      },
-      "IR_transmission_8": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_7_0",
-        "xci_path": "ip\\design_1_IR_transmission_7_0\\design_1_IR_transmission_7_0.xci",
-        "inst_hier_path": "IR_transmission_8",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "52000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "IR_transmission_9": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_8_0",
-        "xci_path": "ip\\design_1_IR_transmission_8_0\\design_1_IR_transmission_8_0.xci",
-        "inst_hier_path": "IR_transmission_9",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "54000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "IR_transmission_10": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_9_0",
-        "xci_path": "ip\\design_1_IR_transmission_9_0\\design_1_IR_transmission_9_0.xci",
-        "inst_hier_path": "IR_transmission_10",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "56000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "IR_transmission_11": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_10_0",
-        "xci_path": "ip\\design_1_IR_transmission_10_0\\design_1_IR_transmission_10_0.xci",
-        "inst_hier_path": "IR_transmission_11",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "58000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "IR_transmission_12": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_11_0",
-        "xci_path": "ip\\design_1_IR_transmission_11_0\\design_1_IR_transmission_11_0.xci",
-        "inst_hier_path": "IR_transmission_12",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "60000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "IR_transmission_13": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_12_0",
-        "xci_path": "ip\\design_1_IR_transmission_12_0\\design_1_IR_transmission_12_0.xci",
-        "inst_hier_path": "IR_transmission_13",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "62000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "IR_transmission_14": {
-        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
-        "xci_name": "design_1_IR_transmission_13_0",
-        "xci_path": "ip\\design_1_IR_transmission_13_0\\design_1_IR_transmission_13_0.xci",
-        "inst_hier_path": "IR_transmission_14",
-        "parameters": {
-          "CARRIER_FREQ": {
-            "value": "64000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IR_transmission",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "125000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "code": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "send": {
-            "direction": "I"
-          },
-          "ir_out": {
-            "direction": "O"
           }
         }
       },
@@ -6310,6 +5700,241 @@
           }
         }
       },
+      "IR_transmission_1": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_0_1",
+        "xci_path": "ip\\design_1_IR_transmission_0_1\\design_1_IR_transmission_0_1.xci",
+        "inst_hier_path": "IR_transmission_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_11": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_10_0",
+        "xci_path": "ip\\design_1_IR_transmission_10_0\\design_1_IR_transmission_10_0.xci",
+        "inst_hier_path": "IR_transmission_11",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_12": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_11_0",
+        "xci_path": "ip\\design_1_IR_transmission_11_0\\design_1_IR_transmission_11_0.xci",
+        "inst_hier_path": "IR_transmission_12",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_13": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_12_0",
+        "xci_path": "ip\\design_1_IR_transmission_12_0\\design_1_IR_transmission_12_0.xci",
+        "inst_hier_path": "IR_transmission_13",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_14": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_13_0",
+        "xci_path": "ip\\design_1_IR_transmission_13_0\\design_1_IR_transmission_13_0.xci",
+        "inst_hier_path": "IR_transmission_14",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
       "IR_transmission_15": {
         "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
         "xci_name": "design_1_IR_transmission_14_0",
@@ -6317,7 +5942,7 @@
         "inst_hier_path": "IR_transmission_15",
         "parameters": {
           "CARRIER_FREQ": {
-            "value": "66000"
+            "value": "38000"
           }
         },
         "reference_info": {
@@ -6365,7 +5990,7 @@
         "inst_hier_path": "IR_transmission_16",
         "parameters": {
           "CARRIER_FREQ": {
-            "value": "68000"
+            "value": "38000"
           }
         },
         "reference_info": {
@@ -6413,7 +6038,7 @@
         "inst_hier_path": "IR_transmission_17",
         "parameters": {
           "CARRIER_FREQ": {
-            "value": "70000"
+            "value": "38000"
           }
         },
         "reference_info": {
@@ -6461,7 +6086,7 @@
         "inst_hier_path": "IR_transmission_18",
         "parameters": {
           "CARRIER_FREQ": {
-            "value": "72000"
+            "value": "38000"
           }
         },
         "reference_info": {
@@ -6509,7 +6134,7 @@
         "inst_hier_path": "IR_transmission_19",
         "parameters": {
           "CARRIER_FREQ": {
-            "value": "74000"
+            "value": "38000"
           }
         },
         "reference_info": {
@@ -6557,7 +6182,7 @@
         "inst_hier_path": "IR_transmission_20",
         "parameters": {
           "CARRIER_FREQ": {
-            "value": "76000"
+            "value": "38000"
           }
         },
         "reference_info": {
@@ -6605,7 +6230,7 @@
         "inst_hier_path": "IR_transmission_21",
         "parameters": {
           "CARRIER_FREQ": {
-            "value": "78000"
+            "value": "38000"
           }
         },
         "reference_info": {
@@ -6653,7 +6278,7 @@
         "inst_hier_path": "IR_transmission_22",
         "parameters": {
           "CARRIER_FREQ": {
-            "value": "80000"
+            "value": "38000"
           }
         },
         "reference_info": {
@@ -6701,7 +6326,7 @@
         "inst_hier_path": "IR_transmission_23",
         "parameters": {
           "CARRIER_FREQ": {
-            "value": "82000"
+            "value": "38000"
           }
         },
         "reference_info": {
@@ -6749,7 +6374,439 @@
         "inst_hier_path": "IR_transmission_24",
         "parameters": {
           "CARRIER_FREQ": {
-            "value": "84000"
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_2": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_1_0",
+        "xci_path": "ip\\design_1_IR_transmission_1_0\\design_1_IR_transmission_1_0.xci",
+        "inst_hier_path": "IR_transmission_2",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_3": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_1_1",
+        "xci_path": "ip\\design_1_IR_transmission_1_1\\design_1_IR_transmission_1_1.xci",
+        "inst_hier_path": "IR_transmission_3",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_4": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_3_0",
+        "xci_path": "ip\\design_1_IR_transmission_3_0\\design_1_IR_transmission_3_0.xci",
+        "inst_hier_path": "IR_transmission_4",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_5": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_3_1",
+        "xci_path": "ip\\design_1_IR_transmission_3_1\\design_1_IR_transmission_3_1.xci",
+        "inst_hier_path": "IR_transmission_5",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_6": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_3_2",
+        "xci_path": "ip\\design_1_IR_transmission_3_2\\design_1_IR_transmission_3_2.xci",
+        "inst_hier_path": "IR_transmission_6",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_7": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_3_3",
+        "xci_path": "ip\\design_1_IR_transmission_3_3\\design_1_IR_transmission_3_3.xci",
+        "inst_hier_path": "IR_transmission_7",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_8": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_7_0",
+        "xci_path": "ip\\design_1_IR_transmission_7_0\\design_1_IR_transmission_7_0.xci",
+        "inst_hier_path": "IR_transmission_8",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_9": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_8_0",
+        "xci_path": "ip\\design_1_IR_transmission_8_0\\design_1_IR_transmission_8_0.xci",
+        "inst_hier_path": "IR_transmission_9",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IR_transmission",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "code": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "ir_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "IR_transmission_10": {
+        "vlnv": "xilinx.com:module_ref:IR_transmission:1.0",
+        "xci_name": "design_1_IR_transmission_9_0",
+        "xci_path": "ip\\design_1_IR_transmission_9_0\\design_1_IR_transmission_9_0.xci",
+        "inst_hier_path": "IR_transmission_10",
+        "parameters": {
+          "CARRIER_FREQ": {
+            "value": "38000"
           }
         },
         "reference_info": {
@@ -6822,24 +6879,6 @@
           "axi_gpio_7/S_AXI"
         ]
       },
-      "axi_interconnect_0_M00_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M00_AXI",
-          "axi_gpio_0/S_AXI"
-        ]
-      },
-      "axi_interconnect_0_M13_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M13_AXI",
-          "axi_gpio_13/S_AXI"
-        ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
-        ]
-      },
       "axi_interconnect_0_M16_AXI": {
         "interface_ports": [
           "axi_interconnect_0/M16_AXI",
@@ -6870,22 +6909,22 @@
           "axi_gpio_9/S_AXI"
         ]
       },
-      "axi_interconnect_0_M17_AXI": {
+      "axi_interconnect_0_M13_AXI": {
         "interface_ports": [
-          "axi_interconnect_0/M17_AXI",
-          "axi_gpio_17/S_AXI"
+          "axi_interconnect_0/M13_AXI",
+          "axi_gpio_13/S_AXI"
         ]
       },
-      "axi_interconnect_0_M15_AXI": {
+      "axi_interconnect_0_M00_AXI": {
         "interface_ports": [
-          "axi_interconnect_0/M15_AXI",
-          "axi_gpio_15/S_AXI"
+          "axi_interconnect_0/M00_AXI",
+          "axi_gpio_0/S_AXI"
         ]
       },
-      "axi_interconnect_0_M18_AXI": {
+      "processing_system7_0_FIXED_IO": {
         "interface_ports": [
-          "axi_interconnect_0/M18_AXI",
-          "axi_gpio_18/S_AXI"
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       },
       "axi_interconnect_0_M10_AXI": {
@@ -6894,58 +6933,10 @@
           "axi_gpio_10/S_AXI"
         ]
       },
-      "axi_interconnect_0_M05_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M05_AXI",
-          "axi_gpio_5/S_AXI"
-        ]
-      },
-      "axi_interconnect_0_M19_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M19_AXI",
-          "axi_gpio_19/S_AXI"
-        ]
-      },
-      "axi_interconnect_0_M24_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M24_AXI",
-          "axi_gpio_24/S_AXI"
-        ]
-      },
-      "axi_interconnect_0_M14_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M14_AXI",
-          "axi_gpio_14/S_AXI"
-        ]
-      },
-      "axi_interconnect_0_M08_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M08_AXI",
-          "axi_gpio_8/S_AXI"
-        ]
-      },
-      "axi_interconnect_0_M23_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M23_AXI",
-          "axi_gpio_23/S_AXI"
-        ]
-      },
-      "axi_interconnect_0_M06_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M06_AXI",
-          "axi_gpio_6/S_AXI"
-        ]
-      },
       "axi_interconnect_0_M01_AXI": {
         "interface_ports": [
           "axi_interconnect_0/M01_AXI",
           "axi_gpio_1/S_AXI"
-        ]
-      },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "axi_interconnect_0/S00_AXI"
         ]
       },
       "processing_system7_0_DDR": {
@@ -6954,10 +6945,76 @@
           "processing_system7_0/DDR"
         ]
       },
+      "axi_interconnect_0_M14_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M14_AXI",
+          "axi_gpio_14/S_AXI"
+        ]
+      },
+      "axi_interconnect_0_M19_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M19_AXI",
+          "axi_gpio_19/S_AXI"
+        ]
+      },
+      "axi_interconnect_0_M06_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M06_AXI",
+          "axi_gpio_6/S_AXI"
+        ]
+      },
+      "axi_interconnect_0_M23_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M23_AXI",
+          "axi_gpio_23/S_AXI"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "axi_interconnect_0/S00_AXI"
+        ]
+      },
+      "axi_interconnect_0_M15_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M15_AXI",
+          "axi_gpio_15/S_AXI"
+        ]
+      },
+      "axi_interconnect_0_M05_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M05_AXI",
+          "axi_gpio_5/S_AXI"
+        ]
+      },
       "axi_interconnect_0_M02_AXI": {
         "interface_ports": [
           "axi_interconnect_0/M02_AXI",
           "axi_gpio_2/S_AXI"
+        ]
+      },
+      "axi_interconnect_0_M18_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M18_AXI",
+          "axi_gpio_18/S_AXI"
+        ]
+      },
+      "axi_interconnect_0_M24_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M24_AXI",
+          "axi_gpio_24/S_AXI"
+        ]
+      },
+      "axi_interconnect_0_M17_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M17_AXI",
+          "axi_gpio_17/S_AXI"
+        ]
+      },
+      "axi_interconnect_0_M08_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M08_AXI",
+          "axi_gpio_8/S_AXI"
         ]
       }
     },
@@ -7064,16 +7121,7 @@
       "axi_gpio_0_gpio_io_o": {
         "ports": [
           "axi_gpio_0/gpio_io_o",
-          "IR_transmission_3/send",
           "IR_transmission_1/send",
-          "IR_transmission_2/send",
-          "IR_transmission_4/send",
-          "IR_transmission_5/send",
-          "IR_transmission_6/send",
-          "IR_transmission_7/send",
-          "IR_transmission_8/send",
-          "IR_transmission_9/send",
-          "IR_transmission_10/send",
           "IR_transmission_11/send",
           "IR_transmission_12/send",
           "IR_transmission_13/send",
@@ -7087,7 +7135,16 @@
           "IR_transmission_21/send",
           "IR_transmission_22/send",
           "IR_transmission_23/send",
-          "IR_transmission_24/send"
+          "IR_transmission_24/send",
+          "IR_transmission_2/send",
+          "IR_transmission_3/send",
+          "IR_transmission_4/send",
+          "IR_transmission_5/send",
+          "IR_transmission_6/send",
+          "IR_transmission_7/send",
+          "IR_transmission_8/send",
+          "IR_transmission_9/send",
+          "IR_transmission_10/send"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -7105,9 +7162,6 @@
           "rst_ps7_0_125M/slowest_sync_clk",
           "axi_gpio_3/s_axi_aclk",
           "axi_interconnect_0/M03_ACLK",
-          "IR_transmission_3/clk",
-          "IR_transmission_1/clk",
-          "IR_transmission_2/clk",
           "axi_gpio_4/s_axi_aclk",
           "axi_interconnect_0/M04_ACLK",
           "axi_gpio_5/s_axi_aclk",
@@ -7116,10 +7170,6 @@
           "axi_interconnect_0/M06_ACLK",
           "axi_gpio_7/s_axi_aclk",
           "axi_interconnect_0/M07_ACLK",
-          "IR_transmission_4/clk",
-          "IR_transmission_5/clk",
-          "IR_transmission_6/clk",
-          "IR_transmission_7/clk",
           "axi_gpio_8/s_axi_aclk",
           "axi_interconnect_0/M08_ACLK",
           "axi_gpio_9/s_axi_aclk",
@@ -7134,13 +7184,6 @@
           "axi_interconnect_0/M13_ACLK",
           "axi_gpio_14/s_axi_aclk",
           "axi_interconnect_0/M14_ACLK",
-          "IR_transmission_8/clk",
-          "IR_transmission_9/clk",
-          "IR_transmission_10/clk",
-          "IR_transmission_11/clk",
-          "IR_transmission_12/clk",
-          "IR_transmission_13/clk",
-          "IR_transmission_14/clk",
           "axi_gpio_15/s_axi_aclk",
           "axi_interconnect_0/M15_ACLK",
           "axi_gpio_16/s_axi_aclk",
@@ -7161,6 +7204,11 @@
           "axi_interconnect_0/M23_ACLK",
           "axi_gpio_24/s_axi_aclk",
           "axi_interconnect_0/M24_ACLK",
+          "IR_transmission_1/clk",
+          "IR_transmission_11/clk",
+          "IR_transmission_12/clk",
+          "IR_transmission_13/clk",
+          "IR_transmission_14/clk",
           "IR_transmission_15/clk",
           "IR_transmission_16/clk",
           "IR_transmission_17/clk",
@@ -7170,7 +7218,16 @@
           "IR_transmission_21/clk",
           "IR_transmission_22/clk",
           "IR_transmission_23/clk",
-          "IR_transmission_24/clk"
+          "IR_transmission_24/clk",
+          "IR_transmission_2/clk",
+          "IR_transmission_3/clk",
+          "IR_transmission_4/clk",
+          "IR_transmission_5/clk",
+          "IR_transmission_6/clk",
+          "IR_transmission_7/clk",
+          "IR_transmission_8/clk",
+          "IR_transmission_9/clk",
+          "IR_transmission_10/clk"
         ]
       },
       "axi_gpio_3_gpio_io_o": {

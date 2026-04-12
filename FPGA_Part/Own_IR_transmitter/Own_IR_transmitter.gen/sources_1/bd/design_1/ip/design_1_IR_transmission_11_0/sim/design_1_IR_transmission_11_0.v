@@ -72,7 +72,7 @@ output wire ir_out;
 
   IR_transmission #(
     .CLK_FREQ(125000000),
-    .CARRIER_FREQ(60000),
+    .CARRIER_FREQ(38000),
     .IDLE(0),
     .START_PULSE(1),
     .START_SPACE(2),
