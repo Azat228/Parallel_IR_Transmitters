@@ -109,14 +109,25 @@ research that I conduct now
 │       └── [Vivado build artifacts]
 │
 ├── 📂 external_design/                   # Circuit Design Files
-│   ├── External_circuit.asc             # 
-24 VCC GND port
+│   ├── External_circuit.asc             # 24 VCC GND port (SPICE)
 │   ├── Safe_Driving_Circuit.asc         # Protected driver circuit (SPICE)
-│   └── Driving_Ciruit.asc               # Alternative driver (SPICE)
+│   ├── Driving_Ciruit.asc               # Alternative driver (SPICE)
+│   └── 📂 Altium/                       # PCB Design (Altium Designer)
+│       ├── 📂 24_external/              # 24-channel external driver PCB
+│       │   ├── PcbLib1.PcbLib
+│       │   ├── PCB_Project/
+│       │   └── __Previews/
+│       └── 📂 Driving_Circuit/          # Driving circuit PCB
+│           └── Control_Circuit_safe/
 │
 ├── 📂 No_FPGA_approach/                  # Arduino-Only Alternative
 │   └── 📂 IR_transmitter/
 │       └── IR_transmitter.ino           # Standalone Arduino TX sketch
+│
+├── 📂 Metasurface\ research_papers/     # Research Reading Materials
+│   ├── My\ list.txt                     # Curated reading list
+│   └── 📂 Step0/                        # Research progress notes
+│       └── Step\ to\ take\ here.txt
 │
 └── 📂 img/                               # Hardware photos & diagrams
     ├── WhatsApp\ Image\ 2026-03-09\ at\ 17.52.39.jpeg
@@ -128,7 +139,61 @@ research that I conduct now
 
 ---
 
-## 🛠 Hardware Setup
+## � PCB Design & Altium Documentation
+
+### Altium PCB Files
+
+The `external_design/Altium/` folder contains complete PCB designs created with **Altium Designer**:
+
+#### 24-Channel External Driver PCB
+- **Directory:** `external_design/Altium/24_external/`
+- **Purpose:** Dedicated driver PCB for all 24 parallel IR LED transmitters
+- **Features:**
+  - 24 independent driver channels with current limiting
+  - Thermal management and RF shielding considerations
+  - Integration connectors for FPGA board
+  - PCB Library files and design projects included
+
+#### Driving Circuit PCB
+- **Directory:** `external_design/Altium/Driving_Circuit/`
+- **Purpose:** Individual IR LED driver circuit design
+- **Features:**
+  - Optimized for single or multi-channel configurations
+  - Safe switching circuitry with transient suppression
+  - References corresponding SPICE simulations in `external_design/`
+
+### SPICE Simulation Files
+
+Complementary SPICE circuit files for simulation and verification:
+- `External_circuit.asc` — 24-port external interface with VCC/GND distribution
+- `Safe_Driving_Circuit.asc` — Protected driver with feedback and current monitoring
+
+
+> **Recommendation:** Review SPICE simulations before PCB manufacturing to validate signal integrity and power delivery.
+
+---
+
+## 📚 Research & Readings
+
+### Research Materials
+
+Located in `Metasurface\ research_papers/` folder:
+
+- **My list.txt** — Curated list of important research papers and technical references related to the project
+- **Step0/** — Research progress notes and next steps for metasurface and IR transmission investigations
+
+### Relevant Topics Covered
+
+- IR transmission physics and optimization
+- Metasurface applications for RF/IR engineering
+- Signal processing and modulation techniques
+- High-speed parallel data transmission
+
+> 📖 **Note:** These materials provide theoretical background and advanced optimization strategies for future enhancements.
+
+---
+
+## �🛠 Hardware Setup
 
 ### Components Required (FPGA Version)
 
@@ -485,10 +550,19 @@ case 'X':
 
 ### Circuit Design References
 
-See `external_design/` folder for SPICE circuit files:
-- `External_circuit.asc` — VCC GND circuit
-- `Safe_Driving_Circuit.asc` — Protected version with feedback
-- `Driving_Ciruit.asc` — Standard IR LED driver
+**PCB Design Files:**
+- `external_design/Altium/24_external/` — Complete 24-channel driver PCB (Altium Designer)
+- `external_design/Altium/Driving_Circuit/` — Individual LED driver PCB design
+
+**SPICE Circuit Simulations:**
+- `external_design/External_circuit.asc` — VCC GND distribution circuit
+- `external_design/Safe_Driving_Circuit.asc` — Protected version with feedback
+- `external_design/Driving_Ciruit.asc` — Standard IR LED driver
+
+### Research & Technical Papers
+
+- `Metasurface\ research_papers/My\ list.txt` — Curated reading list for IR transmission and metasurface topics
+- `Metasurface\ research_papers/Step0/` — Research progress notes and investigation roadmap
 
 ### File Descriptions
 
@@ -506,5 +580,5 @@ This project builds upon:
 
 ---
 
-**Last Updated:** April 2026  
-**Status:** Transmitter Stable | Receiver Under Development
+**Last Updated:** June 2026  
+**Status:** Transmitter Stable | Receiver Under Development | PCB Design Complete
