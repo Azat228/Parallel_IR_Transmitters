@@ -8,6 +8,7 @@
 
 - [Project Overview](#-project-overview)
 - [System Architecture](#-system-architecture)
+- [Transmitter Circuitry](#-transmitter-circuitry)
 - [Project Structure](#-project-structure)
 - [Hardware Setup](#-hardware-setup)
 - [Software Setup & Installation](#-software-setup--installation)
@@ -78,8 +79,8 @@ Receiver Setup (External - Recommended)
 Parallel_IR_Transmitters/
 │
 ├── 📄 README.md                          # This file
-├── 📄 IR_research.pdf                    # 
-research that I conduct now
+├── 📄 IR_research.pdf                    # research that I conduct now
+|── 📄 main.tex                           #The LaTeX file of my Research  
 │
 ├── 📂 PS\ part/                          # FPGA Processing System (PS) - Python Side
 │   ├── 📓 nec_onlyFPGA.ipynb            # Jupyter notebook for PYNQ-Z2
@@ -96,6 +97,9 @@ research that I conduct now
 │       │   └── IR_TransmitterReceiver.ino
 │       └── 📂 IR_Receiver2/             # Receiver sketch (variant)
 │           └── IR_Receiver2.ino
+|       └── 📂 Voltmetr/             # Receiver sketch (variant)
+│           └── Voltmetr.ino
+|            └── Board_Voltmetr.txt
 │
 ├── 📂 FPGA_Part/                         # FPGA Programmable Logic (PL) - Vivado Design
 │   ├── 📂 Own_IR_receiver/              # Vivado project (receiver reference) ⚠️ NOT TESTED
@@ -169,7 +173,109 @@ Complementary SPICE circuit files for simulation and verification:
 - `Safe_Driving_Circuit.asc` — Protected driver with feedback and current monitoring
 
 
+
 > **Recommendation:** Review SPICE simulations before PCB manufacturing to validate signal integrity and power delivery.
+
+---
+
+## 🔌 Transmitter Circuitry
+
+The current hardware work uses two closely related IR transmitter circuits. Both use the same **AO3400A low-side MOSFET driver** and are controlled by the PYNQ-Z2 FPGA's **3.3 V NEC-modulated output**. The IR LEDs are powered from a separate regulated **5 V supply**, with the FPGA ground and 5 V supply ground connected together.
+
+### Circuit 1 — Two-LED Series Transmitter
+
+This is the higher-output transmitter configuration used in the main design. Two **TSAL6200** IR emitters are connected in series and switched by one AO3400A MOSFET.
+
+```text
+                +5 V
+                  |
+             TSAL6200
+                  |
+             TSAL6200
+                  |
+             30 Ω / 0.5 W
+                  |
+                Drain
+              AO3400A
+                Source
+                  |
+                 GND
+
+FPGA GPIO ── 330 Ω ── Gate
+                       |
+                      10 kΩ
+                       |
+                      GND
+```
+
+With a typical LED forward voltage of approximately **1.35 V** per TSAL6200,
+
+```text
+I ≈ (5 V - 2×1.35 V) / 30 Ω
+  ≈ 76.7 mA
+```
+
+so both LEDs carry approximately **77 mA** while the MOSFET is ON.
+
+An optional second identical branch can be added if more optical power is required. Each parallel branch must have its **own 30 Ω current-limiting resistor**.
+
+### Circuit 2 — Single-LED Transmitter
+
+A second test configuration uses only **one TSAL6200**. The MOSFET driver remains the same, but the LED resistor must be increased because there is only one LED forward-voltage drop.
+
+```text
+                +5 V
+                  |
+             TSAL6200
+                  |
+             47 Ω / 0.5 W
+                  |
+                Drain
+              AO3400A
+                Source
+                  |
+                 GND
+
+FPGA GPIO ── 330 Ω ── Gate
+                       |
+                      10 kΩ
+                       |
+                      GND
+```
+
+The approximate current is
+
+```text
+I ≈ (5 V - 1.35 V) / 47 Ω
+  ≈ 77.7 mA
+```
+
+so the single LED also operates at approximately **78 mA**.
+
+The old **30 Ω resistor must not be used with only one LED**, because the estimated current would become approximately
+
+```text
+I ≈ (5 V - 1.35 V) / 30 Ω
+  ≈ 122 mA
+```
+
+which is above the intended operating current.
+
+### Components Shared by Both Circuits
+
+| Component | Value / Part | Purpose |
+|-----------|--------------|---------|
+| IR emitter | TSAL6200, 940 nm | Directional IR transmission |
+| MOSFET | AO3400A | Low-side LED switching |
+| Gate resistor | 330 Ω, 1/4 W | Limits FPGA gate charging current |
+| Gate pull-down | 10 kΩ, 1/4 W | Keeps MOSFET OFF during startup/reset |
+| Bulk capacitor | 100 µF, ≥10 V | Local energy storage |
+| Decoupling capacitor | 1 µF ceramic | Supply decoupling |
+| High-frequency capacitor | 100 nF ceramic | High-frequency decoupling |
+| LED supply | Regulated 5 V | Supplies LED current |
+| Control input | 3.3 V FPGA logic | NEC-modulated 38 kHz switching signal |
+
+The **single-LED circuit is useful as a minimum-power test configuration**. If one emitter already gives reliable reception at the required receiver positions, it may reduce unnecessary optical spill into neighboring receiver regions. It does not completely remove interference from other independent transmitters.
 
 ---
 

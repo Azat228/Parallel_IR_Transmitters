@@ -1,1 +1,2 @@
-Record=TopLevelDocument|FileName=Driving _Circuit.SchDoc|SheetNumber=1
+Record=TopLevelDocument|FileName=Driving _Circuit.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=Driving _Circuit.SchDoc|FileName=Driving_Circuit_one.SchDoc|SheetNumber=1
