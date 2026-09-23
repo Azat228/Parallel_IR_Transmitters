@@ -26,7 +26,7 @@ void loop() {
   int analogvalue = analogRead(A0);
   temp = (analogvalue * 5.0) / 1023.0; 
   input_volt = temp * ((r1+r2)/r1);
-  if (input_volt < 0.1)
+  if (input_volt < 0.3)
   {
     input_volt=0.0;
   }
